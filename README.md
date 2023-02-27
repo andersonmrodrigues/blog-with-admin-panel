@@ -10,7 +10,7 @@
 
 ## Features
 
-- Authetication
+- Authentication
 - Authorization
 - Articles Visualization
 - CRUD Categories
