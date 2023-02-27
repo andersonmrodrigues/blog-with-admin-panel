@@ -1,0 +1,56 @@
+<%- include ('../../partials/header.ejs') %> <%- include
+('../../partials/navbar.ejs') %>
+<div class="container">
+  <br />
+  <h2>Users</h2>
+  <a name="" id="" class="btn btn-success" href="/admin/users/new" role="button"
+    >New</a
+  >
+  <hr />
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Email</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% users.forEach(user =>{ %>
+      <tr>
+        <td scope="row"><%= user.id %></td>
+        <td><%= user.email %></td>
+        <td>
+          <a
+            name=""
+            id=""
+            class="btn btn-warning"
+            href="/admin/users/edit/<%= user.id %>"
+            role="button"
+            >Edit</a
+          >
+          <form
+            onsubmit="confirmDelete(event, this)"
+            action="/users/delete"
+            method="post"
+            style="display: inline"
+          >
+            <input type="hidden" name="id" value="<%= user.id %>" />
+            <button type="submit" class="btn btn-danger">Delete</button>
+          </form>
+        </td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</div>
+<%- include ('../../partials/footer.ejs') %>
+<script>
+  function confirmDelete(event, form) {
+    event.preventDefault();
+    var decision = confirm("Do you want delete this user?");
+    if (decision) {
+      form.submit();
+    }
+  }
+</script>
