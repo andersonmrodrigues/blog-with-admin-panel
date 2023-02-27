@@ -20,12 +20,14 @@
           />
           <div class="form-group">
             <label for="">Category</label>
-            <input type="hidden" value="<%= article.categoryId %>""
-            id="categorySelected">
             <select class="form-control" name="categoryId" id="categoryCombo">
               <option value="">Select</option>
               <% categories.forEach(category=>{ %>
-              <option value="<%= category.id %>"><%= category.title %></option>
+                <% if(category.id == article.categoryId) { %>
+                  <option value="<%= category.id %>" selected><%= category.title %></option>
+                <% } else { %>
+                  <option value="<%= category.id %>"><%= category.title %></option>
+                <% } %>
               <% }) %>
             </select>
           </div>

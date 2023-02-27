@@ -42,6 +42,7 @@ app.use("/", articleController);
 app.get("/", (req, res) => {
   Article.findAll({
     order: [["id", "DESC"]],
+    limit: 3,
   }).then((articles) => {
     Category.findAll({
       order: [["title", "ASC"]],
