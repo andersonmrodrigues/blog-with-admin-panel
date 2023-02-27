@@ -2,20 +2,16 @@
 
 ## Stack
 
-### NodeJS
-
-#### Express
-
-#### Sequelize
-
-### MySQL
-
-### EJS
+- NodeJS
+- Express
+- Sequelize
+- MySQL
+- EJS
 
 ## Features
 
-### Authetication
-### Authorization
-### Articles Visualization
-### CRUD Categories
-### CRUD Articles
+- Authetication
+- Authorization
+- Articles Visualization
+- CRUD Categories
+- CRUD Articles
