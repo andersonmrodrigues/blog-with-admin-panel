@@ -1,28 +1,44 @@
 <%- include ('../../partials/header.ejs') %>
 <body>
   <div class="container">
-    <hr />
-    <div class="card">
-      <div class="card-header">
-        <h2>Login</h2>
-      </div>
-      <div class="card-body">
-        <form action="/authenticate" method="post">
-          <label for="">Email: </label>
-          <input
-            class="form-control"
-            type="email"
-            name="email"
-            placeholder="Fill your email"
-            id=""
-          />
-          <br />
-          <label for="">Password</label>
-          <input class="form-control" type="password" name="password" id="" />
-          <br />
-          <button type="submit" class="btn btn-success btn-block">Login</button>
-          <a href="/" class="btn btn-warning btn-block">Home</a>
-        </form>
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header bg-white">
+            <center>
+              <h3>Login</h3>
+            </center>
+          </div>
+          <div class="card-body">
+            <form action="/authenticate" method="post">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  name="email"
+                  id="email"
+                  placeholder="Enter email"
+                />
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  name="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="Enter password"
+                />
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">
+                Sign In
+              </button>
+              <a href="/" class="btn btn-warning btn-block">Home</a>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   </div>

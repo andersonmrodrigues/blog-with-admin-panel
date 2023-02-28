@@ -4,9 +4,6 @@
     <li class="nav-item">
       <a class="nav-link" href="/">Home</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/login">Login</a>
-    </li>
     <% categories.forEach(category=>{ %>
     <li class="nav-item">
       <a class="nav-link" href="/category/<%= category.slug %>"
@@ -14,5 +11,10 @@
       >
     </li>
     <% }) %>
+  </ul>
+  <ul class="navbar-nav ml-auto">
+    <li class="nav-item">
+      <a class="nav-link" href="/login">Login</a>
+    </li>
   </ul>
 </nav>
